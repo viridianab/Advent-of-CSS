@@ -16,13 +16,151 @@ body {
     color: var(--black);
     background-color: var(--bg);
 }
-
-
-
-
-
-
-@media (min-width:992px) {
+#piano {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    max-width: 98%;
+    width: 100%;
+    margin: auto;
 }
-@media (max-width: 991px) {
+#piano .container {
+    position: relative;
+    width: 100%;
+}
+.keys {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0 35px;
+}
+.keys--group {
+    display: flex;
+    gap: 0 18px;
+}
+.key {
+    position: relative;
+    height: 420px;
+    width: 80px;
+    cursor: pointer;
+}
+.keys--black .keys--group {
+    position: relative;
+    gap: 0 60px;
+    top: -20px;
+}
+.keys--white .key {
+    background-color: var(--white);
+}
+.keys--black {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto auto;
+    gap: 0 145px;
+}
+.keys--black .key {
+    height: 245px;
+    width: 58px;
+    background-color: var(--black);
+    z-index: 2;
+}
+.keys--white .key:hover {
+    background-color: var(--primary);
+}
+.keys--black .key:hover {
+    background-color: var(--secondary);
+}
+.keys--white .keys--group:nth-child(1) .key:nth-child(1) {
+    clip-path: polygon(0 5%, 90% 0, 100% 95%, 15% 95%);
+}
+.keys--white .keys--group:nth-child(1) .key:nth-child(2) {
+    clip-path: polygon(0% 10%, 100% 5%, 100% 100%, 20% 100%);
+}
+.keys--white .keys--group:nth-child(1) .key:nth-child(3) {
+    clip-path: polygon(0% 0%, 100% 3%, 85% 100%, 15% 100%);
+}
+.keys--white .keys--group:nth-child(2) .key:nth-child(1) {
+    clip-path: polygon(0% 5%, 100% 0%, 85% 100%, 20% 100%);
+}
+.keys--white .keys--group:nth-child(2) .key:nth-child(2) {
+    clip-path: polygon(25% 0%, 95% 0%, 100% 100%, 0% 100%);
+}
+.keys--white .keys--group:nth-child(2) .key:nth-child(3) {
+    clip-path: polygon(15% 0%, 90% 0%, 100% 98%, 0% 100%);
+}
+.keys--white .keys--group:nth-child(2) .key:nth-child(4) {
+    clip-path: polygon(0% 2%, 100% 0%, 75% 98%, 15% 98%);
+}
+.keys--white .keys--group:nth-child(3) .key:nth-child(1) {
+    clip-path: polygon(0% 0%, 100% 0%, 70% 96%, 0% 96%);
+}
+.keys--white .keys--group:nth-child(3) .key:nth-child(2) {
+    clip-path: polygon(0% 0%, 75% 0%, 100% 90%, 0% 96%);
+}
+.keys--white .keys--group:nth-child(3) .key:nth-child(3) {
+    clip-path: polygon(20% 1%, 90% 0%, 100% 100%, 0% 98%);
+}
+.keys--white .keys--group:nth-child(4) .key:nth-child(1) {
+    clip-path: polygon(0% 0%, 70% 0%, 100% 90%, 0% 96%);
+}
+.keys--white .keys--group:nth-child(4) .key:nth-child(2) {
+    clip-path: polygon(5% 3%, 85% 3%, 100% 95%, 0% 100%);
+}
+.keys--white .keys--group:nth-child(4) .key:nth-child(3) {
+    clip-path: polygon(0% 11%, 100% 6%, 70% 100%, 0% 100%);
+}
+.keys--black .keys--group:nth-child(1) .key:nth-child(1) {
+    clip-path: polygon(0 0%, 85% 0, 98% 100%, 25% 100%);
+}
+.keys--black .keys--group:nth-child(1) .key:nth-child(2) {
+    clip-path: polygon(12% 0%, 100% 0, 80% 97%, 0% 97%);
+}
+.keys--black .keys--group:nth-child(2) .key:nth-child(1) {
+    left: 10px;
+    clip-path: polygon(23% 0%, 90% 4%, 72% 100%, 26% 98%);
+}
+.keys--black .keys--group:nth-child(2) .key:nth-child(2) {
+    left: -10px;
+    clip-path: polygon(0% 0%, 90% 0, 85% 100%, 17% 100%);
+}
+.keys--black .keys--group:nth-child(2) .key:nth-child(3) {
+    left: -30px;
+    clip-path: polygon(0% 3%, 100% 3%, 73% 100%, 0% 100%);
+}
+.keys--black .keys--group:nth-child(3) .key:nth-child(1) {
+    clip-path: polygon(0 0%, 100% 2%, 87% 100%, 20% 100%);
+}
+.keys--black .keys--group:nth-child(3) .key:nth-child(2) {
+    left: -15px;
+    clip-path: polygon(23% 0%, 100% 2%, 100% 100%, 0% 98%);
+}
+.keys--black .keys--group:nth-child(4) .key:nth-child(1) {
+    left: 40px;
+    clip-path: polygon(8% 5%, 71% 5%, 93% 100%, 10% 97%);
+}
+.keys--black .keys--group:nth-child(4) .key:nth-child(2) {
+    left: 20px;
+    clip-path: polygon(23% 0%, 87% 2%, 75% 100%, 5% 97%);
+}
+.keys--black .keys--group:nth-child(4) .key:nth-child(3) {
+    top: 10px;
+    left: -10px;
+    clip-path: polygon(11% 6%, 90% 0, 100% 100%, 34% 94%);
+}
+.keys--black .keys--group:nth-child(1) {
+    left: 90px;
+}
+.keys--black .keys--group:nth-child(2) {
+    left: 80px;
+}
+.keys--black .keys--group:nth-child(3) {
+    left: 45px;
 }
