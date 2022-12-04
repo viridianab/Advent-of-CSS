@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 01 - Pomodoro timer</title>
+    <link rel="icon" sizes="192x192" href="assets/img/favicon.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <didv id="pomodoro">
+        <div class="pomodoro--circle">
+            <div class="pomodoro--content">
+                <div class="time" id="timer">
+                    <span class="hour">15</span>
+                    <span class="colon">:</span>
+                    <span class="minutes">00</span>
+                </div>
+                <button class="btn btn-start" id="btnStart">Start</button>
+                <button class="btn btn-edit" id="btnEdit"><img src="assets/img/gear.svg" id="icon" alt="Edit"></button>
+            </div>
+            <div class="pomodoro--status" id="status"></div>
+        </div>
+    </didv>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

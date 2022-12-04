@@ -1,0 +1,129 @@
+:root {
+    --black: #000000;
+    --white: #FFFFFF;
+    --primary: #2B2A30;
+    --secondary: #9d0000;
+    --third: #00aa51;
+    --circle-size: 518px;
+}
+@font-face {
+    font-family: 'Bebas Neue Book';
+    src: local('Bebas Neue Book Regular'), local('../fonts/bebasneue-book-webfont'),
+        url('../fonts/bebasneue-book-webfont.woff2') format('woff2'),
+        url('../fonts/bebasneue-book-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Bebas Neue Book';
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+    color: var(--black);
+    background-color: var(--primary);
+}
+#pomodoro {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.pomodoro--circle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: var(--circle-size);
+    width: var(--circle-size);
+    background-color: var(--black);
+    border-radius: 50%;
+    -webkit-box-shadow: 0px -15px 50px 0px rgba(255, 255, 255, 0.15), 0px 15px 50px 0px #000000;
+    box-shadow: 0px -15px 50px 0px rgba(255, 255, 255, 0.15), 0px 15px 50px 0px #000000;
+}
+.pomodoro--status {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--secondary);
+    border-radius: 50%;
+    z-index: 1;
+}
+.pomodoro--status.finished {
+    background-color: var(--third);
+}
+.pomodoro--status::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--black);
+    border-radius: 50%;
+    clip-path: polygon(360% 50%, 50% 50%, 50% 360%);
+    z-index: 2;
+}
+.pomodoro--content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: calc(100% - 18px);
+    width: calc(100% - 18px);
+    border-radius: 50%;
+    background: rgb(23, 23, 26);
+    background: radial-gradient(circle, rgba(58, 57, 63, 1) 14%, rgba(23, 23, 26, 1) 100%);
+    box-shadow: inset 0px 0px 50px 0px rgba(0, 0, 0, 0.45);
+    z-index: 2;
+}
+.time {
+    display: flex;
+    flex-direction: row;
+    gap: 0 5px;
+    font-size: 196px;
+    font-weight: 300;
+    color: var(--white);
+    text-shadow: 1px 4px 14px rgba(0, 0, 0, 0.26);
+    margin: 0 auto 23px;
+}
+.time span:nth-child(odd) {
+    border-bottom: 1px dotted transparent;
+}
+.time.editing span:nth-child(odd) {
+    border-bottom-color: var(--white);
+}
+.btn {
+    text-align: center;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+    cursor: pointer;
+}
+.btn-start {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--white);
+    text-shadow: 1px 4px 14px rgba(0, 0, 0, 0.26);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 12px;
+    opacity: .85;
+}
+.btn-start:hover {
+    opacity: 1;
+}
+.btn-edit {
+    position: relative;
+    top: 35px;
+}

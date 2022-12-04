@@ -1,0 +1,28 @@
+:root {
+    --black: #000000;
+    --white: #FFFFFF;
+    --bg: #37B2C3;
+    --primary: #ffd200;
+    --secondary: #f40082;
+}
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif, serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    color: var(--black);
+    background-color: var(--bg);
+}
+
+
+
+
+
+
+@media (min-width:992px) {
+}
+@media (max-width: 991px) {
+}
