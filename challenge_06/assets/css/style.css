@@ -1,0 +1,28 @@
+:root {
+    --black: #000000;
+    --white: #FFFFFF;
+    --primary: #2B2A30;
+    --secondary: #9d0000;
+    --third: #00aa51;
+}
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif, serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    color: var(--black);
+    background-color: var(--white);
+}
+
+
+
+
+
+
+@media (min-width:992px) {
+}
+@media (max-width: 991px) {
+}
