@@ -39,8 +39,9 @@ body {
 }
 .row {
     display: flex;
-    flex: 1 0;
+    justify-content: space-around;
     gap: 0 1rem;
+    width: 100%;
 }
 .key {
     display: flex;
@@ -68,15 +69,6 @@ body {
     color: var(--secondary);
     padding: 5px 35px;
     width: auto;
-}
-.row:nth-child(2) {
-    gap: 0 23.2px;
-}
-.row:nth-child(3) {
-    gap: 0 15.7px;
-}
-.row:nth-child(4) {
-    gap: 0 22.4px;
 }
 .row:nth-child(4) .key--control {
     padding: 5px 40px;
