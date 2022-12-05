@@ -1,28 +1,83 @@
 :root {
     --black: #000000;
     --white: #FFFFFF;
-    --primary: #2B2A30;
-    --secondary: #9d0000;
-    --third: #00aa51;
+    --primary: #60C1B6;
+    --secondary: #868888;
+    --bg: #F6F6F6;
+    --key-size: 60px;
 }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
 html,
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Poppins', Arial, sans-serif, serif;
+    font-family: 'Inter', Arial, sans-serif, serif;
     font-weight: normal;
     font-style: normal;
     font-size: 16px;
     color: var(--black);
     background-color: var(--white);
 }
-
-
-
-
-
-
-@media (min-width:992px) {
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
 }
-@media (max-width: 991px) {
+#keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem 0;
+    padding: 32px;
+    border-radius: 40px;
+    background-color: var(--bg);
+}
+.row {
+    display: flex;
+    flex: 1 0;
+    gap: 0 1rem;
+}
+.key {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.35rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--primary);
+    height: var(--key-size);
+    width: var(--key-size);
+    padding: 5px;
+    border-radius: 1rem;
+    background-color: var(--white);
+    box-shadow: 0px 1px 15px -5px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+.key:hover {
+    box-shadow: 0px 1px 15px -5px rgba(0, 0, 0, 0.5);
+}
+.key--control {
+    color: var(--secondary);
+    padding: 5px 35px;
+    width: auto;
+}
+.row:nth-child(2) {
+    gap: 0 23.2px;
+}
+.row:nth-child(3) {
+    gap: 0 15.7px;
+}
+.row:nth-child(4) {
+    gap: 0 22.4px;
+}
+.row:nth-child(4) .key--control {
+    padding: 5px 40px;
 }
